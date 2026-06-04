@@ -1,0 +1,48 @@
+# Día 6 — 2026-06-01
+
+## 📚 Tema
+Procesos y servicios del sistema
+
+## ✅ Completado
+- [x] ps aux: listar todos los procesos del sistema
+- [x] htop: monitoreo de procesos en tiempo real
+- [x] Identificado firedragon como proceso más pesado
+- [x] systemctl: start, stop, status, enable, disable, mask, unmask
+- [x] Tor deshabilitado del arranque automático
+- [x] journalctl: logs de servicios en tiempo real
+- [x] IP local identificada: 192.168.18.43
+- [x] Interfaz WiFi identificada: wlp2s0
+- [x] Handshake WPA2 visto en logs de NetworkManager
+
+## 📌 Conceptos clave
+- ps aux muestra todos los procesos con usuario, PID, CPU y RAM
+- htop es ps aux en tiempo real e interactivo
+- systemctl mask es más fuerte que stop — apunta el servicio a /dev/null
+- Tor como servicio y Tor Browser son cosas distintas
+- Superficie de ataque mínima: si no usas un servicio, no lo corras
+- Mi IP local: 192.168.18.43 · Interfaz: wlp2s0
+
+## 🛠️ Comandos usados
+| Comando | Qué hace |
+|---|---|
+| ps aux | Lista todos los procesos del sistema |
+| ps aux \| grep root | Filtra procesos que corren como root |
+| htop | Monitor de procesos interactivo en tiempo real |
+| systemctl list-units --type=service --state=running | Lista servicios activos |
+| systemctl status servicio | Ver estado detallado de un servicio |
+| systemctl start/stop servicio | Iniciar o detener un servicio |
+| systemctl enable/disable servicio | Activar o desactivar en el arranque |
+| systemctl mask/unmask servicio | Bloquear o desbloquear completamente |
+| journalctl _COMM=sudo | Ver logs de uso de sudo |
+| ip a | Ver interfaces de red e IPs |
+
+## ⚠️ Dudas pendientes
+
+
+## 🔗 Ver también
+[[Filesystem de Linux]]
+[[Permisos y usuarios]]
+
+## 📁 GitHub
+- Archivos subidos: linux/dia6.md
+- Commit: "Día 6 - Procesos y servicios"
